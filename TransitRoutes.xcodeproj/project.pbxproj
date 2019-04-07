@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C024B056FA2DEF0142550EF /* libPods-TransitRoutes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E4C4D1E5ED649B3EABBCE /* libPods-TransitRoutes.a */; };
+		9D06FBD7224FF9E2003B3409 /* DirectionsAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBD6224FF9E2003B3409 /* DirectionsAPIController.swift */; };
+		9D06FBDF225008F6003B3409 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBDE225008F6003B3409 /* Directions.swift */; };
+		9D06FBE722503DC3003B3409 /* TransitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBE622503DC3003B3409 /* TransitDetails.swift */; };
+		9D06FBE922503E5D003B3409 /* OtherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBE822503E5D003B3409 /* OtherModels.swift */; };
+		9D06FBEB225041A9003B3409 /* LegAndStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBEA225041A9003B3409 /* LegAndStep.swift */; };
+		9D06FBED225045C6003B3409 /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBEC225045C6003B3409 /* RoutesTableViewController.swift */; };
+		9D06FBEF225089EF003B3409 /* SelectLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D06FBEE225089EF003B3409 /* SelectLocationsViewController.swift */; };
+		9D17DD3022514F3500759668 /* 511TransitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD2F22514F3500759668 /* 511TransitController.swift */; };
+		9D17DD3222514F4000759668 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD3122514F4000759668 /* URLHelper.swift */; };
+		9D17DD382251D03100759668 /* BusOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD372251D03100759668 /* BusOperator.swift */; };
+		9D17DD3A2252648500759668 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD392252648500759668 /* BusStop.swift */; };
+		9D17DD3C22532D0A00759668 /* BusLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD3B22532D0A00759668 /* BusLocation.swift */; };
+		9D17DD3E2258670300759668 /* BusAndDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17DD3D2258670300759668 /* BusAndDistance.swift */; };
 		9DA266CB224F339400341200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA266CA224F339400341200 /* AppDelegate.swift */; };
-		9DA266CD224F339400341200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA266CC224F339400341200 /* ViewController.swift */; };
+		9DA266CD224F339400341200 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA266CC224F339400341200 /* MapViewController.swift */; };
 		9DA266D0224F339400341200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA266CE224F339400341200 /* Main.storyboard */; };
 		9DA266D2224F339500341200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA266D1224F339500341200 /* Assets.xcassets */; };
 		9DA266D5224F339500341200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA266D3224F339500341200 /* LaunchScreen.storyboard */; };
@@ -34,9 +48,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184E4C4D1E5ED649B3EABBCE /* libPods-TransitRoutes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransitRoutes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F6A02E9B744C93CF71C011 /* Pods-TransitRoutes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitRoutes.release.xcconfig"; path = "Target Support Files/Pods-TransitRoutes/Pods-TransitRoutes.release.xcconfig"; sourceTree = "<group>"; };
+		9D06FBD6224FF9E2003B3409 /* DirectionsAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsAPIController.swift; sourceTree = "<group>"; };
+		9D06FBDE225008F6003B3409 /* Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
+		9D06FBE622503DC3003B3409 /* TransitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitDetails.swift; sourceTree = "<group>"; };
+		9D06FBE822503E5D003B3409 /* OtherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherModels.swift; sourceTree = "<group>"; };
+		9D06FBEA225041A9003B3409 /* LegAndStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegAndStep.swift; sourceTree = "<group>"; };
+		9D06FBEC225045C6003B3409 /* RoutesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
+		9D06FBEE225089EF003B3409 /* SelectLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationsViewController.swift; sourceTree = "<group>"; };
+		9D17DD2F22514F3500759668 /* 511TransitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 511TransitController.swift; sourceTree = "<group>"; };
+		9D17DD3122514F4000759668 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
+		9D17DD372251D03100759668 /* BusOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusOperator.swift; sourceTree = "<group>"; };
+		9D17DD392252648500759668 /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		9D17DD3B22532D0A00759668 /* BusLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocation.swift; sourceTree = "<group>"; };
+		9D17DD3D2258670300759668 /* BusAndDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusAndDistance.swift; sourceTree = "<group>"; };
 		9DA266C7224F339400341200 /* TransitRoutes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitRoutes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA266CA224F339400341200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DA266CC224F339400341200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DA266CC224F339400341200 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9DA266CF224F339400341200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DA266D1224F339500341200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DA266D4224F339500341200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +76,7 @@
 		9DA266E6224F339500341200 /* TransitRoutesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitRoutesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA266EA224F339500341200 /* TransitRoutesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitRoutesUITests.swift; sourceTree = "<group>"; };
 		9DA266EC224F339500341200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4F70C33FED7E6F4708224A /* Pods-TransitRoutes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitRoutes.debug.xcconfig"; path = "Target Support Files/Pods-TransitRoutes/Pods-TransitRoutes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C024B056FA2DEF0142550EF /* libPods-TransitRoutes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,8 @@
 				9DA266DE224F339500341200 /* TransitRoutesTests */,
 				9DA266E9224F339500341200 /* TransitRoutesUITests */,
 				9DA266C8224F339400341200 /* Products */,
+				ADD041C2037A981BD2E9E605 /* Pods */,
+				E04E548A34121374DA2A6281 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +130,13 @@
 		9DA266C9224F339400341200 /* TransitRoutes */ = {
 			isa = PBXGroup;
 			children = (
-				9DA266CA224F339400341200 /* AppDelegate.swift */,
-				9DA266CC224F339400341200 /* ViewController.swift */,
 				9DA266CE224F339400341200 /* Main.storyboard */,
+				9DA266CA224F339400341200 /* AppDelegate.swift */,
+				9D06FBEE225089EF003B3409 /* SelectLocationsViewController.swift */,
+				9D06FBEC225045C6003B3409 /* RoutesTableViewController.swift */,
+				9DA266CC224F339400341200 /* MapViewController.swift */,
+				9DB522562259E4760052A41F /* API Controllers */,
+				9D17DD3122514F4000759668 /* URLHelper.swift */,
 				9DA266D1224F339500341200 /* Assets.xcassets */,
 				9DA266D3224F339500341200 /* LaunchScreen.storyboard */,
 				9DA266D6224F339500341200 /* Info.plist */,
@@ -125,6 +162,40 @@
 			path = TransitRoutesUITests;
 			sourceTree = "<group>";
 		};
+		9DB522562259E4760052A41F /* API Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D06FBD6224FF9E2003B3409 /* DirectionsAPIController.swift */,
+				9D17DD2F22514F3500759668 /* 511TransitController.swift */,
+				9D06FBDE225008F6003B3409 /* Directions.swift */,
+				9D06FBEA225041A9003B3409 /* LegAndStep.swift */,
+				9D06FBE622503DC3003B3409 /* TransitDetails.swift */,
+				9D17DD372251D03100759668 /* BusOperator.swift */,
+				9D17DD392252648500759668 /* BusStop.swift */,
+				9D06FBE822503E5D003B3409 /* OtherModels.swift */,
+				9D17DD3B22532D0A00759668 /* BusLocation.swift */,
+				9D17DD3D2258670300759668 /* BusAndDistance.swift */,
+			);
+			path = "API Controllers";
+			sourceTree = "<group>";
+		};
+		ADD041C2037A981BD2E9E605 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB4F70C33FED7E6F4708224A /* Pods-TransitRoutes.debug.xcconfig */,
+				22F6A02E9B744C93CF71C011 /* Pods-TransitRoutes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E04E548A34121374DA2A6281 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184E4C4D1E5ED649B3EABBCE /* libPods-TransitRoutes.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DA266EF224F339500341200 /* Build configuration list for PBXNativeTarget "TransitRoutes" */;
 			buildPhases = (
+				8C668C2343B03A121CD7722C /* [CP] Check Pods Manifest.lock */,
 				9DA266C3224F339400341200 /* Sources */,
 				9DA266C4224F339400341200 /* Frameworks */,
 				9DA266C5224F339400341200 /* Resources */,
+				0DD11DC709AF867A029CF8E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +324,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DD11DC709AF867A029CF8E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransitRoutes/Pods-TransitRoutes-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransitRoutes/Pods-TransitRoutes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C668C2343B03A121CD7722C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransitRoutes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9DA266C3224F339400341200 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA266CD224F339400341200 /* ViewController.swift in Sources */,
+				9D06FBEB225041A9003B3409 /* LegAndStep.swift in Sources */,
+				9D17DD3C22532D0A00759668 /* BusLocation.swift in Sources */,
+				9D06FBE722503DC3003B3409 /* TransitDetails.swift in Sources */,
+				9D06FBD7224FF9E2003B3409 /* DirectionsAPIController.swift in Sources */,
+				9D06FBE922503E5D003B3409 /* OtherModels.swift in Sources */,
+				9D06FBEF225089EF003B3409 /* SelectLocationsViewController.swift in Sources */,
+				9D06FBDF225008F6003B3409 /* Directions.swift in Sources */,
+				9D17DD382251D03100759668 /* BusOperator.swift in Sources */,
+				9D17DD3A2252648500759668 /* BusStop.swift in Sources */,
+				9DA266CD224F339400341200 /* MapViewController.swift in Sources */,
+				9D06FBED225045C6003B3409 /* RoutesTableViewController.swift in Sources */,
 				9DA266CB224F339400341200 /* AppDelegate.swift in Sources */,
+				9D17DD3E2258670300759668 /* BusAndDistance.swift in Sources */,
+				9D17DD3222514F4000759668 /* URLHelper.swift in Sources */,
+				9D17DD3022514F3500759668 /* 511TransitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +563,7 @@
 		};
 		9DA266F0224F339500341200 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB4F70C33FED7E6F4708224A /* Pods-TransitRoutes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +582,7 @@
 		};
 		9DA266F1224F339500341200 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F6A02E9B744C93CF71C011 /* Pods-TransitRoutes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

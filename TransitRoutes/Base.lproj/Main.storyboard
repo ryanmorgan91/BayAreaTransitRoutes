@@ -1,24 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O1T-E5-MDF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="TransitRoutes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orb-gM-aG8" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-A3-C8c">
+                                <rect key="frame" x="0.0" y="88" width="414" height="25"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DAh-kU-dnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2ku-A3-C8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MyE-Hn-oPS"/>
+                            <constraint firstItem="orb-gM-aG8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xiq-f4-8pr"/>
+                            <constraint firstItem="2ku-A3-C8c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zh3-pt-oed"/>
+                            <constraint firstItem="orb-gM-aG8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d7t-1S-wPh"/>
+                            <constraint firstItem="2ku-A3-C8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="glI-yw-3D4"/>
+                            <constraint firstAttribute="bottom" secondItem="orb-gM-aG8" secondAttribute="bottom" id="lhY-xR-uSA"/>
+                            <constraint firstItem="orb-gM-aG8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rBk-3S-drh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="2ku-A3-C8c" id="rP2-NU-Yg8"/>
+                        <outlet property="mapView" destination="orb-gM-aG8" id="abs-Zb-IrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2165" y="737"/>
+        </scene>
+        <!--Transit Routes-->
+        <scene sceneID="eCm-uQ-65i">
+            <objects>
+                <viewController id="l3R-Me-fic" customClass="SelectLocationsViewController" customModule="TransitRoutes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmR-ta-Ac5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EZL-AC-7B0">
+                                <rect key="frame" x="20" y="368" width="374" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lHc-ex-iyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-Zv-utu">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-uV-O9s">
+                                                <rect key="frame" x="0.0" y="30" width="374" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="originButtonTapped:" destination="l3R-Me-fic" eventType="touchUpInside" id="YiO-vU-hvG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="af9-Xb-tLM">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2m-Hm-bbK">
+                                        <rect key="frame" x="0.0" y="130" width="374" height="30"/>
+                                        <state key="normal" title="Get Directions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="kt2-Ra-DP6" kind="show" identifier="RoutesSegue" id="tA2-Aj-zTb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EZL-AC-7B0" firstAttribute="centerX" secondItem="dmR-ta-Ac5" secondAttribute="centerX" id="9Z5-pC-m2a"/>
+                            <constraint firstItem="EZL-AC-7B0" firstAttribute="leading" secondItem="6mT-vi-BGX" secondAttribute="leading" constant="20" id="CE3-wo-NXc"/>
+                            <constraint firstItem="6mT-vi-BGX" firstAttribute="trailing" secondItem="EZL-AC-7B0" secondAttribute="trailing" constant="20" id="dvt-DT-pmf"/>
+                            <constraint firstItem="EZL-AC-7B0" firstAttribute="centerY" secondItem="dmR-ta-Ac5" secondAttribute="centerY" id="rci-Vq-C5j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6mT-vi-BGX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transit Routes" id="Mly-vG-rEM"/>
+                    <connections>
+                        <outlet property="customOriginButton" destination="2ee-uV-O9s" id="cQt-2z-DFa"/>
+                        <outlet property="destinationTextField" destination="af9-Xb-tLM" id="7lw-zd-N7k"/>
+                        <outlet property="getDirectionsButton" destination="x2m-Hm-bbK" id="rlf-16-zn5"/>
+                        <outlet property="originTextField" destination="VG0-Zv-utu" id="VeC-NH-TaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Lb-tk-m7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.6521739130435" y="748.66071428571422"/>
+        </scene>
+        <!--Route Options-->
+        <scene sceneID="qby-CJ-yoa">
+            <objects>
+                <tableViewController id="kt2-Ra-DP6" customClass="RoutesTableViewController" customModule="TransitRoutes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D49-bf-Dav">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="directionsCell" textLabel="yfH-kg-tuf" detailTextLabel="9o9-a3-vB9" style="IBUITableViewCellStyleValue1" id="vMO-ya-Ea5">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vMO-ya-Ea5" id="Egj-U8-M3d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yfH-kg-tuf">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9o9-a3-vB9">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MapSegue" id="a65-ia-uIw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kt2-Ra-DP6" id="Sdk-x9-QrQ"/>
+                            <outlet property="delegate" destination="kt2-Ra-DP6" id="ytG-PH-otP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Route Options" id="LMY-4r-Nnl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLQ-ew-wUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="737"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qI2-Vf-cpI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1T-E5-MDF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jdW-Sq-xho">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l3R-Me-fic" kind="relationship" relationship="rootViewController" id="uEx-ah-ww5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWv-3r-egm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614.49275362318849" y="748.66071428571422"/>
         </scene>
     </scenes>
 </document>
