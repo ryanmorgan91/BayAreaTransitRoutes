@@ -154,7 +154,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 }
             }
         }
- 
         completion()
     }
     
@@ -176,6 +175,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             guard let distanceString = legs[0].distance?.text else {return}
             let busAndDistance = BusAndDistance(distance: distance, distanceString: distanceString, vehicleActivity: busAndPosition.vehicleActivity, position: busAndPosition.position)
             self.busesAndDistances.append(busAndDistance)
+                
             dispatchGroup.leave()
             })
         }

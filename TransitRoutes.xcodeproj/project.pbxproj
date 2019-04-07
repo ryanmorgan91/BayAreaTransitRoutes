@@ -135,7 +135,7 @@
 				9D06FBEE225089EF003B3409 /* SelectLocationsViewController.swift */,
 				9D06FBEC225045C6003B3409 /* RoutesTableViewController.swift */,
 				9DA266CC224F339400341200 /* MapViewController.swift */,
-				9DB522562259E4760052A41F /* API Controllers */,
+				9DB522562259E4760052A41F /* API Model */,
 				9D17DD3122514F4000759668 /* URLHelper.swift */,
 				9DA266D1224F339500341200 /* Assets.xcassets */,
 				9DA266D3224F339500341200 /* LaunchScreen.storyboard */,
@@ -162,7 +162,7 @@
 			path = TransitRoutesUITests;
 			sourceTree = "<group>";
 		};
-		9DB522562259E4760052A41F /* API Controllers */ = {
+		9DB522562259E4760052A41F /* API Model */ = {
 			isa = PBXGroup;
 			children = (
 				9D06FBD6224FF9E2003B3409 /* DirectionsAPIController.swift */,
@@ -176,7 +176,7 @@
 				9D17DD3B22532D0A00759668 /* BusLocation.swift */,
 				9D17DD3D2258670300759668 /* BusAndDistance.swift */,
 			);
-			path = "API Controllers";
+			path = "API Model";
 			sourceTree = "<group>";
 		};
 		ADD041C2037A981BD2E9E605 /* Pods */ = {

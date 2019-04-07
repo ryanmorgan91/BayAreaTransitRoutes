@@ -63,6 +63,7 @@ class SelectLocationsViewController: UIViewController {
         userLocationManager.delegate = self
         userLocationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         userLocationManager.distanceFilter = 5
+        userLocationManager.requestWhenInUseAuthorization()
         
         getDirectionsButton.setTitle("Get Directions", for: .normal)
         getDirectionsButton.layer.cornerRadius = 12
