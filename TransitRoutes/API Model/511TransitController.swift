@@ -14,7 +14,7 @@ class TransitController {
         let baseURL = URL(string: "http://api.511.org/transit/operators?")!
         
         var query: [String: String] = [
-            "api_key": "25cd4c1d-7294-4d82-b167-4c3fb0342278",
+            "api_key": "",
             "format": "json"
         ]
         
@@ -36,7 +36,7 @@ class TransitController {
         
         let baseURL = URL(string: "http://api.511.org/transit/VehicleMonitoring?")!
         var query: [String: String] = [
-            "api_key": "25cd4c1d-7294-4d82-b167-4c3fb0342278",
+            "api_key": "",
             "agency": operatorId
         ]
         
