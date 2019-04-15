@@ -13,7 +13,7 @@ class DirectionsController {
     let baseURL = URL(string: "https://maps.googleapis.com/maps/api/directions/json?")!
     
     var query: [String: String] = [
-        "key": "AIzaSyBLxxFhpAdA3MPcO2A51yZU-hI-mF1ZyQ8",
+        "key": "",
         "mode": "transit",
         "transit_mode": "bus",
         "alternatives": "true"
@@ -37,7 +37,7 @@ class DirectionsController {
     }
     
     var busDistanceQuery: [String: String] = [
-        "key": "AIzaSyBLxxFhpAdA3MPcO2A51yZU-hI-mF1ZyQ8",
+        "key": "",
         "mode": "driving",
         "alternatives": "false"
     ]
